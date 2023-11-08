@@ -150,7 +150,7 @@ def find_taxid(ncbi_db, tax_dict, desc, regex):
 
 def run():
     # Define command-line arguments
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="This tool parses fasta headers for organism information and adds the necessary taxonomy ID needed in order to create a Kraken2 database.")
     parser.add_argument("-f", "--fasta", type=str, help="Path to fasta that needs formatting.")
     parser.add_argument("-o", "--out", type=str, help="Path to output directory.")
     parser.add_argument("-d", "--db", type=str, help="Path to pickle database.")
