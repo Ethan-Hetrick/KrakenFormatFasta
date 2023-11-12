@@ -18,18 +18,18 @@ def kreport2csv(file):
 
     return input
 
-def run():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--input", type=str, help="Path to input files.")
-    parser.add_argument("-o", "--output", type=str, help="Path to output directory.")
-    args = parser.parse_args()
+# def run():
+#     parser = argparse.ArgumentParser()
+#     parser.add_argument("-i", "--input", type=str, help="Path to input files.")
+#     parser.add_argument("-o", "--output", type=str, help="Path to output directory.")
+#     args = parser.parse_args()
 
-    input_files = sys.stdin
+#     input_files = sys.stdin
 
-    print("sample_name,percent_reads_all,reads_all,reads_clade,unmerged_all,unmerged_clade,merged_all,merged_clade,lvl_type,taxid,clade_name")
+#     print("sample_name,percent_reads_all,reads_all,reads_clade,unmerged_all,unmerged_clade,merged_all,merged_clade,lvl_type,taxid,clade_name")
     
-    for file in input_files:
-        kreport2csv(file)
+#     for file in input_files:
+#         kreport2csv(file)
 
-if __name__ == "__main__":
-    run()
+# if __name__ == "__main__":
+#     run()
