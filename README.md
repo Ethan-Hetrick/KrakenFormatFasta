@@ -1,6 +1,8 @@
 # KrakenFormatFasta
 Formats a fasta file to include kraken headers for kraken database generation.
 
+![workflow diagram](./assets/pics/workflow.png)
+
 ## Usage
 
 ```bash

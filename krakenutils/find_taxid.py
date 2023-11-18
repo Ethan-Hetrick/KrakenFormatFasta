@@ -66,7 +66,7 @@ def find_taxid(ncbi_db, tax_dict, desc, regex, cache):
                         return taxid, cache, matches_log
                     # If fuzzy search returns nothing, move on to search taxonomy
                     else:
-                        taxid = search_ncbi('taxonomy', m)
+                        taxid = search_ncbi('taxonomy', fuz_match)
                         if taxid != 0:
                             matches_log['NCBI taxonomy database (Entrez, fuzzy)'] += 1
                             cache[lookup_name] = taxid
@@ -79,11 +79,3 @@ def find_taxid(ncbi_db, tax_dict, desc, regex, cache):
                                 matches_log['NCBI lookup accession'] += 1
                                 cache[lookup_name] = taxid
                                 return taxid, cache, matches_log
-
-    if 'taxid' not in locals():
-        print("Could not find following entry")
-        print(desc)
-        print(matches)
-        print(lookup_name)
-        print(fuz_matches)
-        exit()
