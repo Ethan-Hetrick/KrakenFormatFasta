@@ -46,5 +46,3 @@ def download_taxonomy():
     os.remove(zip_file_name)
     
     return names_dmp_dict
-
-download_taxonomy()
